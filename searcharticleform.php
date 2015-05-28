@@ -11,13 +11,21 @@
     <h2>Search article</h2>
     <form action="searcharticleprocess.php" method="get">
         <p align="left"><label><b>Title: </b>
-        <input type="text" name="title" maxlength="100" style="width:90%;"</label><br><br>
-		<b>author: </b>
-		<input type="text" name="author" maxlength="30" size="30"</label><br><br>
-		<b>method: </b>
-		<input type="text" name="method" maxlength="20" size="20"</label><br><br>
-		<b>venue: </b>
-		<input type="text" name="venue" maxlength="10" size="10"</label><br><br>
+            <input type="text" name="title" maxlength="100" size="100"</label></p>
+		<p><b>Author: </b>
+		  <input type="text" name="author" maxlength="30" size="30"</label></p>
+		<p><b>Journal: </b>
+		  <input type="text" name="journal" maxlength="20" size="20"</label></p>
+		<p><b>Year: </b>
+		  <input type="text" name="year" maxlength="4" size="4"</label></p>
+        <p><b>Method: </b>
+            <select name="method">
+                <option value=""></option>
+                <option value="Case study">Case study</option>
+                <option value="Experiment">Experiment</option>
+                <option value="Interview">Interview</option>
+                <option value="Other">Other</option>
+            </select></p>
         <input type="submit" value="Search"></p>
     </form>
 	<p><a href="index.php">Return to Home Page</a></p>
