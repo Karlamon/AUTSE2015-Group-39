@@ -32,7 +32,9 @@
             echo "<hr>";
             if (mysqli_num_rows($query_results) > 0) {
                 while ($row = mysqli_fetch_assoc($query_results)) {
-                    echo "<p align=\"left\"><b>Title: </b>", $row["title"], "<br><br>";
+                    echo "<p align=\"left\"><b>Title: </b>";
+                    $titles = $row["title"];
+		    echo "<a href=\"article.php?id=$titles\">$titles</a>"."<br><br>";
                     echo "<b>Author(s): </b>", $row["author"], "<br>";
                     echo "<b>Journal: </b>", $row["journal"], "<br>";
                     echo "<b>Year: </b>", $row["year"], "<br>";
