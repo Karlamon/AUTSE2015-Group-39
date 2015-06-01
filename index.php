@@ -9,10 +9,9 @@
 <body>
 	<h1>Article Searcher</h1>
     <h2>Home Page</h2>
-    <p><a href="submitarticleform.php">Submit new article</a><br>
+    <p><a href="loginform.php">Submit new article</a><br>
         <a href="searcharticleform.php">Search article</a><br>
         <a href="createaccountform.php">Create account</a><br>
-        <a href="loginform.php">Login</a><br>
         <a href="about.php">About this assignment</a></p>
 </body>
 </html>
