@@ -9,7 +9,8 @@
 <body>
 	<h1>Article Searcher</h1>
     <h2>Create account</h2>
-    All fields required.
+    <p>Create an account to submit articles.</p>
+    <p>All fields required.</p>
 	<form action="createaccountprocess.php" method="post">
         <p align="left"><label><b>Username: </b>
             <input type="text" name="username" maxlength="30" size="30"</label></p>
