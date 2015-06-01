@@ -1,15 +1,25 @@
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Submit new article - Article Searcher</title>
-</head>
-<body>
-	<h1>Article Searcher</h1>
-    <h2>Submit new article</h2>
-	<p><?php
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Submit new article - Article Searcher</title>
+    </head>
+    <body>
+        <header>
+            <h1>Article Searcher</h1>
+        </header>
+    <bar>
+        <div class="container">
+            <div id="links">
+                <li><a href="index.php">Home Page</a></li>
+            </div>
+        </div>
+    </bar>
+    <div id="text">
+        <h2>Submit new article</h2>
+		<?php
         $title = ($_POST["title"]);
         $author = ($_POST["author"]);
         $journal = ($_POST["journal"]);
@@ -117,6 +127,6 @@
             mysqli_close($dbConnect);
         }
 	?>
-    <br><a href="index.php">Return to Home Page</a></p>
-</body>
+	</div>
+	</body>
 </html>
