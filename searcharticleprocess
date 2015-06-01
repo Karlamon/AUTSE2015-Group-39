@@ -32,24 +32,33 @@
             echo "<hr>";
             if (mysqli_num_rows($query_results) > 0) {
                 while ($row = mysqli_fetch_assoc($query_results)) {
-                    echo "<p align=\"left\"><b>Title: </b>";
-                    $titles = $row["title"];
-		    echo "<a href=\"article.php?id=$titles\">$titles</a>"."<br><br>";
+                    echo "<p align=\"left\"><b>", $row["title"], "</b><br><br>";
                     echo "<b>Author(s): </b>", $row["author"], "<br>";
                     echo "<b>Journal: </b>", $row["journal"], "<br>";
                     echo "<b>Year: </b>", $row["year"], "<br>";
                     echo "<b>Creditability rating: </b>", $row["creditability"], "<br>";
+                    echo "<b>Creditability reason: </b>", $row["credReason"], "<br>";
+                    echo "<b>Creditability rating by: </b>", $row["credRatedBy"], "<br>";
                     echo "<b>Research level: </b>", $row["reslevel"], "<br>";
                     echo "<b>Practice name: </b>", $row["pracname"], "<br>";
                     echo "<b>Practice description: </b>", $row["pracdesc"], "<br>";
                     echo "<b>Benefit tested: </b>", $row["benefit"], "<br>";
                     echo "<b>Study context: </b>", $row["context"], "<br>";
+                    echo "<b>Who: </b>", $row["credWho"], "<br>";
+                    echo "<b>What: </b>", $row["credWhat"], "<br>";
+                    echo "<b>Where: </b>", $row["credWhere"], "<br>";
+                    echo "<b>When: </b>", $row["credWhen"], "<br>";
+                    echo "<b>How: </b>", $row["credHow"], "<br>";
+                    echo "<b>Why: </b>", $row["credWhy"], "<br>";
                     echo "<b>Study result: </b>", $row["result"], "<br>";
                     echo "<b>Method integrity: </b>", $row["integrity"], "<br>";
                     echo "<b>Confidence rating: </b>", $row["confidence"], "<br>";
+                    echo "<b>Confidence reason: </b>", $row["confReason"], "<br>";
+                    echo "<b>Confidence rating by: </b>", $row["confRatedBy"], "<br>";
                     echo "<b>Question: </b>", $row["question"], "<br>";
                     echo "<b>Method: </b>", $row["method"], "<br>";
                     echo "<b>Metrics: </b>", $row["metrics"], "<br>";
+                    echo "<b>Nature of Participants: </b>", $row["participant"], "<br>";
                     echo "<hr/>";
                 }
                 mysqli_free_result($query_results);
