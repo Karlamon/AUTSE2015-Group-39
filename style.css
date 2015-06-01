@@ -1,0 +1,90 @@
+body {
+	font-family:Arial;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+header {
+	font-family: Comic Sans MS;
+	background-color: #323268;
+	margin: 0;
+	width: 100%;
+	font-size: 20px;
+	padding: 5px 0;
+	text-align: center;
+	color: #ffffff;
+}
+
+bar {
+	background-color: #333333;
+	box-shadow: 0 5px 5px #a8a8a8;
+	line-height:30px;
+  	background-color:#A4A4A4;
+    	height:600px;
+    	width:180px;
+    	float:left;
+    	padding:30px;
+}
+
+#links {
+	margin: auto;
+	padding: 10px 0;
+}
+
+bar li {
+	display: inline-block;
+	width: 210px;
+	font-size: 20px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+bar li:hover {
+	background-color: #626262;
+	color: #333333;
+	transition: all 0.5s;
+}
+
+.selected {
+	background-color: #626262;
+	color: #333333;
+}
+
+bar a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+.row {
+	margin: 15px 20px;
+	font-size: 18px;
+}
+
+.col-15,
+.col-20,
+.col-30 {
+	display: inline-block;
+}
+
+.col-15 {
+	width: 150pt;
+}
+
+.col-20 {
+	width: 50pt;
+}
+
+.col-30 {
+	width: 70pt;
+}
+
+#text {
+    float:left;
+    padding:20px; 
+}
