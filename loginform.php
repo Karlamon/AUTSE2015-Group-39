@@ -4,12 +4,12 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Submit new article - Article Searcher</title>
+	<title>Login - Article Searcher</title>
 </head>
 <body>
 	<h1>Article Searcher</h1>
     <h2>Login</h2>
-    All fields required.
+    You must log in to submit a new article.
 	<form action="loginprocess.php" method="get">
         <p align="left"><label><b>Username: </b>
             <input type="text" name="username" maxlength="30" size="30"</label></p>
