@@ -1,15 +1,26 @@
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Search article - Article Searcher</title>
-</head>
-<body>
-	<h1>Article Searcher</h1>
-    <h2>Search article</h2>
-	<?php
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Search article - Article Searcher</title>
+    </head>
+    <body>
+        <header>
+            <h1>Article Searcher</h1>
+        </header>
+    <bar>
+        <div class="container">
+            <div id="links">
+                <li><a href="index.php">Home Page</a></li>
+                <li><a href="searcharticleform.php">Search for another article</a></li>
+            </div>
+        </div>
+    </bar>
+    <div id="text">
+        <h2>Search article</h2>
+        <?php
 //		$dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "(username)", "(password)", "(username)")
         $dbConnect = @mysqli_connect("localhost", "root", "", "zbv9522")
             or die("<p>Unable to connect to the database server.<br>".
@@ -68,9 +79,7 @@
         else
             echo "<p>No results found.</p>";
         mysqli_close($dbConnect);
-	?>
-    <p><a href="searcharticleform.php">Search for another article</a>
-    <br>
-    <a href="index.php">Return to Home Page</a></p>
-</body>
+		?>
+	</div>
+	</body>
 </html>
