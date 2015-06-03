@@ -1,3 +1,5 @@
+<!--Liang Chen (1392702)-->
+<!--Qingyang Guo (1395160)-->
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
@@ -135,7 +137,7 @@
                                     <textarea name="confReason" maxlength="150" rows="4" cols="50"></textarea>
                                 </p>
                                 <p align="left">
-                                    <label>rated by: </label>
+                                    <label>Rated by: </label>
                                     <input type="text" name="confRatedBy" maxlength="100" size="30"
                                 </p>
                             </div> 
