@@ -1,3 +1,5 @@
+<!--Liang Chen (1392702)-->
+<!--Qingyang Guo (1395160)-->
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
@@ -17,9 +19,14 @@
                 <li><a href="loginform.php">Submit new article</a><br></li>
                 <li><a href="searcharticleform.php">Search article</a><br></li>
                 <li><a href="createaccountform.php">Create account</a><br></li>
-                <li><a href="about.php">About this assignment</a></li>
+                <li><a href="about.php">About</a></li>
             </div>
         </div>
     </bar>
+    <div id="text">
+        <h2>Welcome</h2>
+        <p>Welcome to Article Searcher. This program allows you to submit and search information on
+            various journals on the database.</p>
+    </div>
 </body>
 </html>
