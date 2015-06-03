@@ -1,3 +1,5 @@
+<!--Liang Chen (1392702)-->
+<!--Qingyang Guo (1395160)-->
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
@@ -50,7 +52,6 @@
         $question = ($_POST["question"]);
         $method = ($_POST["method"]);
         $metrics = ($_POST["metrics"]);
-
         $participant = ($_POST["participant"]);
         if (($title == null) || ($author == null) || ($journal == null) || ($year == null) ||
             (empty($_POST["creditability"])) || ($credReason == null) || ($credRatedBy == null) ||
@@ -64,8 +65,7 @@
                 <p><a href=\"javascript:history.back(1);\">Try again</a>";
         }
         else {
-//		    $dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "(username)", "(password)", "(username)")
-            $dbConnect = @mysqli_connect("localhost", "root", "", "zbv9522")
+	$dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "zbv9522", "", "zbv9522")
                 or die("<p>Unable to connect to the database server.</p>".
                        "<p>Error code ". mysqli_connect_errno(). ": ".
                        mysqli_connect_error(). "</p>".
@@ -103,7 +103,7 @@
                 question VARCHAR(200) NOT NULL,
                 method VARCHAR(10) NOT NULL,
                 metrics VARCHAR(50) NOT NULL,
-                participant VARCHAR(21) NOT NULL);";
+                participant VARCHAR(22) NOT NULL);";
             
             $insert_query = "INSERT INTO article_database (title, author, journal, year,
             creditability, credReason, credRatedBy, reslevel, pracname, pracdesc, benefit,
@@ -114,15 +114,15 @@
                 '$credWho', '$credWhat', '$credWhere', '$credWhen', '$credHow', '$credWhy',
                 '$result', '$integrity', '$confidence', '$confReason', '$confRatedBy', '$question',
                 '$method', '$metrics', '$participant');";
-            
+                        
             if (!mysqli_query($dbConnect, $create_query)) {
                 echo "<p>Error creating table: ", mysql_error($dbConnect), "</p>";
             }
             if (mysqli_query($dbConnect, $insert_query)) {
-                echo "<p>Status posted.<br>";
+                echo "<p>Status posted.</p>";
             }
             else {
-                echo "<p>Error posting status: ", mysql_error($dbConnect), "<p>";
+                echo "<p>Error posting status: ", mysql_error($dbConnect), "</p>";
             }
             mysqli_close($dbConnect);
         }
