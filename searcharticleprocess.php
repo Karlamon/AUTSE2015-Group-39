@@ -1,3 +1,5 @@
+<!--Liang Chen (1392702)-->
+<!--Qingyang Guo (1395160)-->
 <!--Karl Smith (1390533)-->
 <!DOCTYPE html>
 <html>
@@ -21,8 +23,7 @@
     <div id="text">
         <h2>Search article</h2>
         <?php
-//		$dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "(username)", "(password)", "(username)")
-        $dbConnect = @mysqli_connect("localhost", "root", "", "zbv9522")
+      $dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "zbv9522", "", "zbv9522")
             or die("<p>Unable to connect to the database server.<br>".
                    "Error code ". mysqli_connect_errno(). ": ".
                    mysqli_connect_error(). "</p>".
