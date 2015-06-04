@@ -65,7 +65,7 @@
                 <p><a href=\"javascript:history.back(1);\">Try again</a>";
         }
         else {
-	$dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "zbv9522", "", "zbv9522")
+	$dbConnect = @mysqli_connect("segroup39-virtualbox", "root", "", "article_db")
                 or die("<p>Unable to connect to the database server.</p>".
                        "<p>Error code ". mysqli_connect_errno(). ": ".
                        mysqli_connect_error(). "</p>".
@@ -76,7 +76,7 @@
                             Site created by Karl Smith (1390533).<br>
                             <b>Email:</b> <a href=\"mailto:zbv9522@aut.ac.nz\">zbv9522@aut.ac.nz</a>
                         </div>");
-            $create_query = "CREATE TABLE IF NOT EXISTS article_database (
+            $create_query = "CREATE TABLE IF NOT EXISTS articles (
                 title VARCHAR(100) NOT NULL,
                 author VARCHAR(100) NOT NULL,
                 journal VARCHAR(100) NOT NULL,
@@ -105,7 +105,7 @@
                 metrics VARCHAR(50) NOT NULL,
                 participant VARCHAR(22) NOT NULL);";
             
-            $insert_query = "INSERT INTO article_database (title, author, journal, year,
+            $insert_query = "INSERT INTO articles (title, author, journal, year,
             creditability, credReason, credRatedBy, reslevel, pracname, pracdesc, benefit,
             context, credWho, credWhat, credWhere, credWhen, credHow, credWhy, result, integrity,
             confidence, confReason, confRatedBy, question, method, metrics, participant)
