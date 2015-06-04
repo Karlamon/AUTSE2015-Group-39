@@ -23,7 +23,7 @@
     <div id="text">
         <h2>Search article</h2>
         <?php
-      $dbConnect = @mysqli_connect("cmslamp14.aut.ac.nz", "zbv9522", "", "zbv9522")
+      	$dbConnect = @mysqli_connect("segroup39-virtualbox", "root", "", "article_db")
             or die("<p>Unable to connect to the database server.<br>".
                    "Error code ". mysqli_connect_errno(). ": ".
                    mysqli_connect_error(). "</p>".
@@ -34,7 +34,7 @@
         $journal = $_GET["journal"];
         $year = $_GET["year"];
         $method = $_GET["method"];
-        $select_query = "SELECT * FROM article_database WHERE title LIKE '%$title%' AND author LIKE             '%$author%' AND journal LIKE '%$journal%' AND year LIKE '%$year%' AND method LIKE
+        $select_query = "SELECT * FROM articles WHERE title LIKE '%$title%' AND author LIKE             '%$author%' AND journal LIKE '%$journal%' AND year LIKE '%$year%' AND method LIKE
             '%$method%' ORDER BY year DESC;";
         $query_results = mysqli_query($dbConnect, $select_query);
         if (($title == null) && ($author == null) && ($journal == null) && ($year == null) &&
